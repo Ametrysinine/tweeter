@@ -17,7 +17,7 @@ html {
  * Global layout stuff
  */
 
-body * {
+body {
   font-family: "Source Sans 3", sans-serif;
   font-optical-sizing: auto;
   font-weight:100;
