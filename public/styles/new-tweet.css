@@ -1,0 +1,42 @@
+section.new-tweet {
+  background-color:  seashell;
+  border-top: solid 5px antiquewhite;
+  border-left: solid 5px antiquewhite;
+  border-right: solid 10px antiquewhite;
+  border-bottom: ridge 10px bisque;
+  margin-top: 10px; 
+}
+
+button {
+  font-family: 'Times New Roman', Times, serif;
+  background-color: inherit;
+  color: maroon;
+  margin: 5px;
+  font-style: italic;
+  padding-left:0.75em;
+  padding-right:0.75em;
+  border: dashed 1px maroon;
+  border-bottom: dotted 3px maroon;
+}
+
+textarea {
+  border: dashed 1px ivory;
+  border-bottom: dotted 2px maroon;
+  background-color: floralwhite;
+  justify-content: center;
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-bottom: 1em;
+  font-family:'Ink Free', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-style: italic;
+  color: darkred;
+}
+
+.container h2 {  font-family: 'Lucida Calligraphy', Lucida, sans-serif;
+color: maroon;
+font-style: italic;}
+
+textarea:focus {
+  font-family: 
+  color:indianred;
+}
