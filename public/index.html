@@ -60,11 +60,16 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
-      <h2>Compose Tweet</h2>
+
       <form class="form-inline" action="/tweets" method = "POST">
-        <textarea name="text" id="tweet-text" placeholder="About what are you humming?"></textarea>
-        <div>
+        <div class="header">
+          <h2>To my followers,</h2> 
           <button type="submit">Tweet</button>
+        </div>
+
+        <textarea name="text" id="tweet-text" placeholder="About what are you humming?"></textarea>
+        <div class="footer">
+
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
