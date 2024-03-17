@@ -6,7 +6,10 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -14,10 +17,19 @@ html {
  * Global layout stuff
  */
 
-body {
+body * {
+  font-family: "Source Sans 3", sans-serif;
+  font-optical-sizing: auto;
+  font-weight:100;
+  font-style: normal;
+
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
+}
+
+body nav i {
+  color: red;
 }
 
 /*
