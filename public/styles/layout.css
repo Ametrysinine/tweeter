@@ -18,9 +18,11 @@ html {
  */
 
 body {
+  display: flex;
+  flex-direction: column;
   font-family: "Source Sans 3", sans-serif;
   font-optical-sizing: auto;
-  font-weight:100;
+  font-weight: 100;
   font-style: normal;
 
   color: #545149;
@@ -31,3 +33,9 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+main {
+  max-width: 90%;
+  align-self: center;
+  background-color: #f4f1ec;
+}

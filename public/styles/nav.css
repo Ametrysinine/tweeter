@@ -4,6 +4,9 @@ nav {
   justify-content: space-between;
   align-items: center;
   position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
 
   height: 120px;
   width: 100%;
@@ -46,7 +49,7 @@ decoration.bold {
   align-items: center;
 }
 
-.down-box > i {
+#down-arrow {
   color: red;
 }
 
