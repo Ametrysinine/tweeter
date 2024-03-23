@@ -54,12 +54,13 @@ textarea:focus {
   font-weight:600;
 }
 
-.header {
+.new-tweet .header {
   display: flex;
   justify-content: flex-start;
   margin-left: 1em;
 }
-.footer {
+
+.new-tweet .footer {
   display: flex;
   justify-content: space-between;
   margin-left: 1.5em;

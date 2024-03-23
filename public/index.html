@@ -26,6 +26,7 @@
   <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
   <link rel="stylesheet" href="/styles/header.css" type="text/css" />
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+  <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://kit.fontawesome.com/120f404dd8.js" crossorigin="anonymous"></script>
@@ -48,7 +49,7 @@
     </span>
 
   </nav>
-  <header>
+  <header class="header">
     <div>
         <img src="/images/profile-hex.png"> 
     </div>
@@ -73,29 +74,37 @@
     <article class="tweet-box"> 
       <article class="tweet">
         <h2>Tweetone</h2>
-        <section class="header">
+        <header>
             <span>
               <img src="/images/user-example-1.png">
               <p class="name">Dr. Moro Voro</p>
             </span> 
             <p class="tweeter-id">@Morovoro</p>
-        </section>
-        <section class="body">
+          </header>
+        <content>
           <p>Tweet text lorem ipsum dorum lopum qauzi lfsle </p>
-        </section>
+        </content>
+        <footer>
+          <span class="date">10 days ago</span>
+          <span class="icons-box"><i class="fa-solid fa-flag"></i><i class="fa-solid fa-retweet"></i><i class="fa-solid fa-heart"></i></span>
+        </footer>
       </article>
       <article class="tweet">
-        <h2>Tweettwo</h2>
-        <section class="header">
+        <h2>Tweetone</h2>
+        <header>
             <span>
-              <img src="/images/user-example-2.png">
+              <img src="/images/user-example-1.png">
               <p class="name">Dr. Moro Voro</p>
             </span> 
             <p class="tweeter-id">@Morovoro</p>
-        </section>
-        <section class="body">
+          </header>
+        <body>
           <p>Tweet text lorem ipsum dorum lopum qauzi lfsle </p>
-        </section>
+        </body>
+        <footer>
+          <span class="date">10 days ago</span>
+          <span class="icons-box"><i class="fa-solid fa-flag"></i></span>
+        </footer>
       </article>
     </article >
   </main>
