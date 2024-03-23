@@ -65,17 +65,42 @@
       <form class="form-inline" action="/tweets" method = "POST">
         <div class="header">
           <h2>To my followers,</h2> 
-          <button type="submit">Tweet</button>
         </div>
-
-        <textarea name="text" id="tweet-text" placeholder="About what are you humming?"></textarea>
+        <textarea name="text" id="new-tweet-text" placeholder="What are you humming about?"></textarea>
         <div class="footer">
-
+          <button type="submit">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
     </section>
-    
+    <article class="tweet-box"> 
+      <article class="tweet">
+        <h2>Tweetone</h2>
+        <section class="header">
+            <span>
+              <img src="/images/user-example-1.png">
+              <p class="name">Dr. Moro Voro</p>
+            </span> 
+            <p class="tweeter-id">@Morovoro</p>
+        </section>
+        <section class="body">
+          <p>Tweet text lorem ipsum dorum lopum qauzi lfsle </p>
+        </section>
+      </article>
+      <article class="tweet">
+        <h2>Tweettwo</h2>
+        <section class="header">
+            <span>
+              <img src="/images/user-example-2.png">
+              <p class="name">Dr. Moro Voro</p>
+            </span> 
+            <p class="tweeter-id">@Morovoro</p>
+        </section>
+        <section class="body">
+          <p>Tweet text lorem ipsum dorum lopum qauzi lfsle </p>
+        </section>
+      </article>
+    </article >
   </main>
 </body>
 
