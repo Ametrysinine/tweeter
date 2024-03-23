@@ -4,6 +4,9 @@ section.new-tweet {
   margin-top: 10px; 
   flex-direction: column;
   height: auto;
+  padding: 1em;
+  width: inherit;
+  
 }
 
 button {
@@ -17,7 +20,7 @@ button {
   padding: 0.5em;
   flex-direction: column;
   justify-content: center;
-align-items: center;
+  align-items: center;
   margin-bottom: 1em;
   margin-left: 1em;
   width: 5em;
@@ -32,13 +35,13 @@ align-items: center;
   justify-content: center;
   padding: 1em;
   padding-bottom: 0em;
-margin: 1.5em;
+  margin: 1.5em;
   font-family:"Source Sans 3", sans-serif;
   color: darkslategray;
   font-weight:600;
-  min-width: 19em;
   flex-wrap: wrap;
   resize: vertical;
+  width: 90%;
 }
 
 .container h2 {  font-family: 'Ink Free', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;

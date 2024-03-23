@@ -1,6 +1,6 @@
 $(document).ready(function() {
   console.log($("#tweet-text:focus"));
-  $("#tweet-text").on("input", function() {
+  $("#new-tweet-text").on("input", function() {
     const counter = document.querySelector(".counter");
 
     const maxChars = 140;
