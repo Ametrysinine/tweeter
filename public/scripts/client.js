@@ -57,11 +57,7 @@ $(document).ready(function() {
   let tweetData;
 
   const loadTweets = function() {
-    $.ajax('/tweets', { method: 'GET' })
-    .then(function(data) {
-      console.log(`success: received tweetData ${data}`);
-      renderTweets(data);
-    });
+    $.ajax('/tweets', { method: 'GET', success: function(data) {renderTweets(data)}, })
   };
 
   const renderTweets = function(tweetArray) {
@@ -76,21 +72,24 @@ $(document).ready(function() {
   // renderTweets(data);
 
   $('#submit-form').on('submit', function(event) {
-    $.ajax('/tweets', { method: 'POST' });
     event.preventDefault();
-    console.log('preventing default');
+    // console.log('preventing default');
 
-    const textSubmission = document.querySelector('#new-tweet-text').value;
+    const textSubmission = document.querySelector('#new-tweet-text').value.trim();
     if (textSubmission === "" || textSubmission === null) {
-
       alert('Your tweet is blank.');
+      return;
+    }
+
+    if (textSubmission.length > 140) {
+      alert('Your tweet exceeds the 140 character limit.');
       return;
     }
 
     let $data = $(this).serialize();
 
     
-    $.post('/tweets', $data, console.log('Post to /tweets success')).then(loadTweets());
+    $.post('/tweets', $data, loadTweets());
     $('#new-tweet-text').val("");
     $('.counter').val(140);
   });
