@@ -79,11 +79,20 @@ $(document).ready(function() {
     $.ajax('/tweets', { method: 'POST' });
     event.preventDefault();
     console.log('preventing default');
-    const $data = $(this).serialize();
 
-    $.post('/tweets', $data, console.log('Post to /tweets success'));
-    loadTweets();
+    const textSubmission = document.querySelector('#new-tweet-text').value;
+    if (textSubmission === "" || textSubmission === null) {
+
+      alert('Your tweet is blank.');
+      return;
+    }
+
+    let $data = $(this).serialize();
+
+    
+    $.post('/tweets', $data, console.log('Post to /tweets success')).then(loadTweets());
     $('#new-tweet-text').val("");
+    $('.counter').val(140);
   });
   // $('#submit-tweet').on('click', function(event) {
   //   $.ajax('/tweets.html', { method: 'POST' });
