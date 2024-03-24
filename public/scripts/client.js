@@ -6,19 +6,26 @@
 
 $(document).ready(function() {
   console.log('jQuery ready');
+  const escape = function(str) {
+    let div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
+  };
+
+  
   const createTweetElement = function(tweetObject) {
     return $(`
     <article class="tweet">
         <h2>Tweetone</h2>
         <header>
             <span>
-              <img src="${tweetObject.user.avatars}">
-              <p class="name">${tweetObject.user.name}</p>
+              <img src="${escape(tweetObject.user.avatars)}">
+              <p class="name">${escape(tweetObject.user.name)}</p>
             </span> 
-            <p class="tweeter-id">${tweetObject.user.handle}</p>
+            <p class="tweeter-id">${escape(tweetObject.user.handle)}</p>
           </header>
         <section>
-          <p>${tweetObject.content.text}</p>
+          <p>${escape(tweetObject.content.text)}</p>
         </section>
         <footer>
           <span class="date">${timeago.format(tweetObject["created_at"])}</span>
@@ -58,7 +65,7 @@ $(document).ready(function() {
 
   const loadTweets = function() {
     $('.tweet-box').empty();
-    $.ajax('/tweets', { method: 'GET', success: function(data) {renderTweets(data)}, })
+    $.ajax('/tweets', { method: 'GET', success: function(data) { renderTweets(data); }, });
   };
 
   const renderTweets = function(tweetArray) {
@@ -76,6 +83,7 @@ $(document).ready(function() {
     event.preventDefault();
     // console.log('preventing default');
 
+
     const textSubmission = document.querySelector('#new-tweet-text').value.trim();
     if (textSubmission === "" || textSubmission === null) {
       alert('Your tweet is blank.');
@@ -89,7 +97,8 @@ $(document).ready(function() {
 
     let $data = $(this).serialize();
 
-    
+
+
     $.post('/tweets', $data, loadTweets);
     $('#new-tweet-text').val("");
     $('.counter').val(140);
