@@ -6,6 +6,8 @@
 
 $(document).ready(function() {
   console.log('jQuery ready');
+  const error = document.querySelector('#error');
+
   const escape = function(str) {
     let div = document.createElement("div");
     div.appendChild(document.createTextNode(str));
@@ -80,18 +82,21 @@ $(document).ready(function() {
   // renderTweets(data);
 
   $('#submit-form').on('submit', function(event) {
+    error.style.display = 'none';
     event.preventDefault();
     // console.log('preventing default');
 
 
     const textSubmission = document.querySelector('#new-tweet-text').value.trim();
     if (textSubmission === "" || textSubmission === null) {
-      alert('Your tweet is blank.');
+      $('#error').slideDown('slow');
+      error.innerHTML = 'Your tweet is blank.';
       return;
     }
 
     if (textSubmission.length > 140) {
-      alert('Your tweet exceeds the 140 character limit.');
+      $('#error').slideDown('slow');
+      error.innerHTML = 'Your tweet exceeds 140 characters.';
       return;
     }
 
@@ -102,6 +107,7 @@ $(document).ready(function() {
     $.post('/tweets', $data, loadTweets);
     $('#new-tweet-text').val("");
     $('.counter').val(140);
+
   });
   // $('#submit-tweet').on('click', function(event) {
   //   $.ajax('/tweets.html', { method: 'POST' });
