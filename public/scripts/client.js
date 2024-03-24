@@ -76,13 +76,14 @@ $(document).ready(function() {
   // renderTweets(data);
 
   $('#submit-form').on('submit', function(event) {
-    $.ajax('/tweets.html', { method: 'POST' });
+    $.ajax('/tweets', { method: 'POST' });
     event.preventDefault();
     console.log('preventing default');
     const $data = $(this).serialize();
 
     $.post('/tweets', $data, console.log('Post to /tweets success'));
-
+    loadTweets();
+    $('#new-tweet-text').val("");
   });
   // $('#submit-tweet').on('click', function(event) {
   //   $.ajax('/tweets.html', { method: 'POST' });
