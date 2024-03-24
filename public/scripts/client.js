@@ -57,6 +57,7 @@ $(document).ready(function() {
   let tweetData;
 
   const loadTweets = function() {
+    $('.tweet-box').empty();
     $.ajax('/tweets', { method: 'GET', success: function(data) {renderTweets(data)}, })
   };
 
@@ -89,7 +90,7 @@ $(document).ready(function() {
     let $data = $(this).serialize();
 
     
-    $.post('/tweets', $data, loadTweets());
+    $.post('/tweets', $data, loadTweets);
     $('#new-tweet-text').val("");
     $('.counter').val(140);
   });
