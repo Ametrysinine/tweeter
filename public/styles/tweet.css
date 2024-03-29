@@ -2,7 +2,6 @@
   border-top: dotted darkslategrey 4px;
   width: inherit;
 }
-
 .tweet {
   display: flex;
   flex-direction: column;
@@ -12,15 +11,12 @@
   color: darkslategray;
   font-weight:600;
 }
-
 .tweet:hover {
   box-shadow: 10px 5px 5px grey;
 }
-
 .tweet > h2 {
   display: none;
 }
-
 .tweet > header {
   margin: 1em;
   margin-top: 0.5em;
@@ -29,18 +25,15 @@
   justify-content: space-between;
   font-weight: 300;
 }
-
 .tweet > header > .tweeter-id {
   color: rgb(167, 176, 185);
   font-weight: 400;
 }
-
 .tweet > header > span {
   display: flex;
   flex-direction: row;
   color: darkslategray;
 }
-
 .tweet section {
   display: flex;
   padding-left: 1em;
@@ -49,8 +42,6 @@
   margin-bottom: 0.5em;
   border-bottom: 4px solid darkslategray;
 }
-
-
 .tweet > footer {
   display: flex;
   justify-content: space-between;
@@ -61,17 +52,14 @@
   margin-top: 0;
   margin-bottom: 0.5em;
 }
-
 .icons-box {
   padding-left: 1em;
   display: flex;
   justify-content: space-evenly;
 }
-
 .icons-box i {
   padding-left: 1em;
 }
-
 .icons-box i:hover {
   color: olive;
 }

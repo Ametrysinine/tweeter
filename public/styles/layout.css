@@ -43,19 +43,41 @@ main {
   align-self: center;
   background-color:  gainsboro;
 }
-
+/* DESKTOP */
 @media only screen and (min-width: 1024px) {
   body {
     flex-direction: row;
     background-color: gainsboro;
     justify-content: flex-end;
   }
-
-
-
   main.container {
     padding-top: 110px;
     padding-left: 33%;
     width: 99%;
+  }
+
+  .header-container {
+    justify-content: center;
+    background-color: gainsboro;
+    background-image: none;
+    width: 33%;
+    height: auto;
+    position: fixed;
+    left: 0;
+  }
+  .header {
+    height: 320px;
+    width: 320px;
+    background-color: #ddfa00;
+    background-image: url("https://www.transparenttextures.com/patterns/dark-geometric.png");
+    padding: 40px;
+    margin: 30vh;
+  }
+}
+/* TABLET */
+@media only screen and (max-width: 1024px) {
+  nav {
+    background-color: #ddfa00;
+    background-image: url("https://www.transparenttextures.com/patterns/dark-geometric.png");
   }
 }
