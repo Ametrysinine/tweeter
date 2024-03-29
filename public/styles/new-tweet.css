@@ -6,11 +6,9 @@ section.new-tweet {
   height: auto;
   padding: 1em;
   width: inherit;
-  
+
 }
-
 button {
-
   font-family: "Bungee", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -26,7 +24,6 @@ button {
   width: 5em;
   height: 2em;
 }
-
 #new-tweet-text {
   display: flex;
   border: hidden;
@@ -43,37 +40,31 @@ button {
   resize: vertical;
   width: 90%;
 }
-
 .container h2 {  font-family: 'Ink Free', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 color: maroon;
 font-style: italic;}
-
 textarea:focus {
   font-family:"Source Sans 3", sans-serif;
   color: black;
   font-weight:600;
 }
-
 .new-tweet .header {
   display: flex;
   justify-content: flex-start;
   margin-left: 1em;
 }
-
 .new-tweet .footer {
   display: flex;
   justify-content: space-between;
   margin-left: 1.5em;
   margin-right: 1.5em;
 }
-
 .counter {
   font-family: "Bungee", sans-serif;
   font-weight: 400;
   font-style: normal;
   color: darkslategray;
 }
-
 #error {			
   background-color: #fce4e4;
   border: 1px solid #fcc2c3;
