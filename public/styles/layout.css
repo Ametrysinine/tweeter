@@ -43,3 +43,19 @@ main {
   align-self: center;
   background-color:  gainsboro;
 }
+
+@media only screen and (min-width: 1024px) {
+  body {
+    flex-direction: row;
+    background-color: gainsboro;
+    justify-content: flex-end;
+  }
+
+
+
+  main.container {
+    padding-top: 110px;
+    padding-left: 33%;
+    width: 99%;
+  }
+}
