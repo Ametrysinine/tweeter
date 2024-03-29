@@ -63,6 +63,7 @@ $(document).ready(function() {
   //     "created_at": 1461113959088
   //   }
   // ]
+  let tweetData;
 
   const loadTweets = function() {
     $('.tweet-box').empty();
@@ -78,13 +79,15 @@ $(document).ready(function() {
   };
 
   loadTweets();
-
+  // renderTweets(data);
 
   $('#submit-form').on('submit', function(event) {
     error.style.display = 'none';
+    event.preventDefault();
+    // console.log('preventing default');
+
 
     const textSubmission = document.querySelector('#new-tweet-text').value.trim();
-
     if (textSubmission === "" || textSubmission === null) {
       $('#error').slideDown('slow');
       error.innerHTML = 'Your tweet is blank.';
@@ -98,10 +101,18 @@ $(document).ready(function() {
     }
 
     let $data = $(this).serialize();
-    console.log($data);
-    $.post('/tweets', $data, loadTweets);
 
+
+
+    $.post('/tweets', $data, loadTweets);
     $('#new-tweet-text').val("");
     $('.counter').val(140);
+
   });
+  // $('#submit-tweet').on('click', function(event) {
+  //   $.ajax('/tweets.html', { method: 'POST' });
+  //   event.preventDefault();
+  // });
+
+
 });
