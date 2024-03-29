@@ -16,3 +16,22 @@ This repository is the starter code for the project: Students will fork and clon
 
 - Express
 - Node 5.10.x or above
+
+## Features
+
+#### Includes safeguards against cross site scripting in tweets 
+
+!["Prevents html code execution in tweets"](https://github.com/Ametrysinine/tweeter/blob/master/docs/safeguard.png)
+
+#### Supports multiple device sizes
+
+##### Desktop:
+!["Size: desktop"](https://github.com/Ametrysinine/tweeter/blob/master/docs/Size-Medium.png) 
+
+##### Mobile/tablet:
+!["Size: tablet and smaller"](https://github.com/Ametrysinine/tweeter/blob/master/docs/Size-Small.png)
+
+## Known Issues
+
+- Lacks functionality for creating users, uploading images
+- Lacks functionality for liking, retweeting, etc.
