@@ -4,9 +4,9 @@ nav {
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 200;
+    top: 0;
+    left: 0;
+    z-index: 200;
 
   height: 120px;
   width: 100%;
@@ -26,7 +26,7 @@ nav {
 .nav-text {
   font-family: "Source Sans 3", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 100;
+  font-weight:100;
   font-style: normal;
   color: #FFFFFF;
   font-size: 24px;
@@ -53,9 +53,3 @@ decoration.bold {
   color: red;
 }
 
-@media only screen and (max-width: 1024px) {
-  nav {
-    background-color: #ddfa00;
-    background-image: url("https://www.transparenttextures.com/patterns/dark-geometric.png");
-  }
-}
