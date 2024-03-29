@@ -14,7 +14,7 @@ $(document).ready(function() {
     return div.innerHTML;
   };
 
-  
+
   const createTweetElement = function(tweetObject) {
     return $(`
     <article class="tweet">
@@ -37,34 +37,6 @@ $(document).ready(function() {
     `);
   };
 
-
-
-  // const data = [
-  //   {
-  //     "user": {
-  //       "name": "Newton",
-  //       "avatars": "https://i.imgur.com/73hZDYK.png"
-  //       ,
-  //       "handle": "@SirIsaac"
-  //     },
-  //     "content": {
-  //       "text": "If I have seen further it is by standing on the shoulders of giants"
-  //     },
-  //     "created_at": 1461116232227
-  //   },
-  //   {
-  //     "user": {
-  //       "name": "Descartes",
-  //       "avatars": "https://i.imgur.com/nlhLi3I.png",
-  //       "handle": "@rd" },
-  //     "content": {
-  //       "text": "Je pense , donc je suis"
-  //     },
-  //     "created_at": 1461113959088
-  //   }
-  // ]
-  let tweetData;
-
   const loadTweets = function() {
     $('.tweet-box').empty();
     $.ajax('/tweets', { method: 'GET', success: function(data) { renderTweets(data); }, });
@@ -79,13 +51,9 @@ $(document).ready(function() {
   };
 
   loadTweets();
-  // renderTweets(data);
 
   $('#submit-form').on('submit', function(event) {
     error.style.display = 'none';
-    event.preventDefault();
-    // console.log('preventing default');
-
 
     const textSubmission = document.querySelector('#new-tweet-text').value.trim();
     if (textSubmission === "" || textSubmission === null) {
@@ -101,18 +69,9 @@ $(document).ready(function() {
     }
 
     let $data = $(this).serialize();
-
-
-
     $.post('/tweets', $data, loadTweets);
+
     $('#new-tweet-text').val("");
     $('.counter').val(140);
-
   });
-  // $('#submit-tweet').on('click', function(event) {
-  //   $.ajax('/tweets.html', { method: 'POST' });
-  //   event.preventDefault();
-  // });
-
-
 });

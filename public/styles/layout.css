@@ -26,14 +26,13 @@ body {
   font-style: normal;
 
   color: #545149;
-  background-color: #f4f1ec;
+  background-color: gainsboro;
   font-size: 24px;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
-
 main {
   display: flex;
   flex-direction: column;
@@ -41,21 +40,41 @@ main {
   width: 90%;
   align-items: center;
   align-self: center;
-  background-color:  gainsboro;
+  background-color: gainsboro;
 }
-
 @media only screen and (min-width: 1024px) {
   body {
     flex-direction: row;
     background-color: gainsboro;
     justify-content: flex-end;
   }
-
-
-
   main.container {
-    padding-top: 110px;
+    padding-top: 120px;
     padding-left: 33%;
     width: 99%;
+    padding-right: 2vw;
+  }
+  .header-container {
+    justify-content: center;
+    background-color: gainsboro;
+    background-image: none;
+    width: 33%;
+    height: auto;
+    position: fixed;
+    left: 0;
+  }
+  .header {
+    height: 340px;
+    width: 340px;
+    background-color: #ddfa00;
+    background-image: url("https://www.transparenttextures.com/patterns/dark-geometric.png");
+    padding: 40px;
+    margin: 30vh;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  nav {
+    background-color: #ddfa00;
+    background-image: url("https://www.transparenttextures.com/patterns/dark-geometric.png");
   }
 }
